@@ -40,7 +40,7 @@ namespace CapaVista
         {
             try
             {
-                frmVentana1 form3 = new frmVentana1();
+                frmCuentaContable form3 = new frmCuentaContable();
                 form3.MdiParent = this;
                 bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
                 form3.Show();
@@ -71,6 +71,66 @@ namespace CapaVista
             {
                 this.Close();
             }
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmEmpleados form3 = new frmEmpleados();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void tipoCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmTipoCuenta form3 = new frmTipoCuenta();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void cuentasBancariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmCuentasBancarias form3 = new frmCuentasBancarias();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void tipoCuentasBancariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmTipoCuentaBancaria form3 = new frmTipoCuentaBancaria();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void tipoMovimientosDeBancosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmTipoMovimientosBancarios form3 = new frmTipoMovimientosBancarios();
+                form3.MdiParent = this;
+                bitacora.guardarEnBitacora(IdUsuario, "1", "0002", "Entrada a la Vista");
+                form3.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
     }
 }

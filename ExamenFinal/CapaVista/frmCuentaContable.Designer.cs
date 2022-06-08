@@ -1,7 +1,7 @@
 ﻿
 namespace CapaVista
 {
-    partial class frmVentana1
+    partial class frmCuentaContable
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,29 @@ namespace CapaVista
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuentaContable));
             this.navegador1 = new DLL.nav.navegador();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtIDCuenta = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtAbono = new System.Windows.Forms.TextBox();
             this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbnEstatusamodulo = new System.Windows.Forms.RadioButton();
             this.rbnEstatusimodulo = new System.Windows.Forms.RadioButton();
             this.lblEstatus = new System.Windows.Forms.Label();
-            this.txtIDEmpresa = new System.Windows.Forms.TextBox();
-            this.txtFinContrato = new System.Windows.Forms.TextBox();
-            this.dtpFinContrato = new System.Windows.Forms.DateTimePicker();
-            this.cbxIDEmpresa = new System.Windows.Forms.ComboBox();
+            this.txtIDTipoCuenta = new System.Windows.Forms.TextBox();
+            this.cbxIDTipo = new System.Windows.Forms.ComboBox();
             this.lblIDEmpresa = new System.Windows.Forms.Label();
-            this.lblFinContrato = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSaldoAcumulado = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,80 +69,85 @@ namespace CapaVista
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(52, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Campo 1";
+            this.label1.Text = "ID Cuenta:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 139);
+            this.label2.Location = new System.Drawing.Point(61, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Campo 2";
+            this.label2.Text = "Nombre:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 172);
+            this.label3.Location = new System.Drawing.Point(70, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Campo 3";
+            this.label3.Text = "Cargo:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 193);
+            this.label4.Location = new System.Drawing.Point(67, 219);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Campo 4";
+            this.label4.Text = "Abono:";
             // 
-            // textBox1
+            // txtIDCuenta
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtIDCuenta.Location = new System.Drawing.Point(115, 113);
+            this.txtIDCuenta.Name = "txtIDCuenta";
+            this.txtIDCuenta.Size = new System.Drawing.Size(209, 20);
+            this.txtIDCuenta.TabIndex = 1;
+            this.txtIDCuenta.Tag = "pkId";
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtNombre.Location = new System.Drawing.Point(115, 136);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(209, 20);
+            this.txtNombre.TabIndex = 2;
+            this.txtNombre.Tag = "nombre";
             // 
-            // textBox3
+            // txtCargo
             // 
-            this.textBox3.Location = new System.Drawing.Point(139, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtCargo.Location = new System.Drawing.Point(115, 186);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(209, 20);
+            this.txtCargo.TabIndex = 4;
+            this.txtCargo.Tag = "cargo";
             // 
-            // textBox4
+            // txtAbono
             // 
-            this.textBox4.Location = new System.Drawing.Point(139, 190);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(209, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtAbono.Location = new System.Drawing.Point(115, 212);
+            this.txtAbono.Name = "txtAbono";
+            this.txtAbono.Size = new System.Drawing.Size(209, 20);
+            this.txtAbono.TabIndex = 5;
+            this.txtAbono.Tag = "abono";
             // 
             // dgvVistaPrevia
             // 
             this.dgvVistaPrevia.AllowUserToAddRows = false;
             this.dgvVistaPrevia.AllowUserToDeleteRows = false;
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVistaPrevia.Location = new System.Drawing.Point(592, 90);
+            this.dgvVistaPrevia.Location = new System.Drawing.Point(367, 96);
             this.dgvVistaPrevia.Name = "dgvVistaPrevia";
             this.dgvVistaPrevia.ReadOnly = true;
             this.dgvVistaPrevia.RowHeadersWidth = 51;
-            this.dgvVistaPrevia.Size = new System.Drawing.Size(582, 320);
+            this.dgvVistaPrevia.Size = new System.Drawing.Size(807, 250);
             this.dgvVistaPrevia.TabIndex = 88;
+            this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(399, 311);
+            this.txtEstado.Location = new System.Drawing.Point(328, 312);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(33, 20);
             this.txtEstado.TabIndex = 90;
@@ -153,9 +160,9 @@ namespace CapaVista
             // 
             this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Controls.Add(this.rbnEstatusimodulo);
-            this.panel1.Location = new System.Drawing.Point(161, 311);
+            this.panel1.Location = new System.Drawing.Point(115, 312);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 30);
+            this.panel1.Size = new System.Drawing.Size(209, 30);
             this.panel1.TabIndex = 91;
             // 
             // rbnEstatusamodulo
@@ -164,7 +171,7 @@ namespace CapaVista
             this.rbnEstatusamodulo.Location = new System.Drawing.Point(12, 7);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
             this.rbnEstatusamodulo.Size = new System.Drawing.Size(55, 17);
-            this.rbnEstatusamodulo.TabIndex = 6;
+            this.rbnEstatusamodulo.TabIndex = 8;
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
             this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
@@ -176,7 +183,7 @@ namespace CapaVista
             this.rbnEstatusimodulo.Location = new System.Drawing.Point(134, 7);
             this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
             this.rbnEstatusimodulo.Size = new System.Drawing.Size(63, 17);
-            this.rbnEstatusimodulo.TabIndex = 7;
+            this.rbnEstatusimodulo.TabIndex = 9;
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
             this.rbnEstatusimodulo.UseVisualStyleBackColor = true;
@@ -185,95 +192,107 @@ namespace CapaVista
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Location = new System.Drawing.Point(51, 314);
+            this.lblEstatus.Location = new System.Drawing.Point(63, 315);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(45, 13);
             this.lblEstatus.TabIndex = 89;
             this.lblEstatus.Text = "Estatus:";
             // 
-            // txtIDEmpresa
+            // txtIDTipoCuenta
             // 
-            this.txtIDEmpresa.Location = new System.Drawing.Point(398, 256);
-            this.txtIDEmpresa.Name = "txtIDEmpresa";
-            this.txtIDEmpresa.Size = new System.Drawing.Size(34, 20);
-            this.txtIDEmpresa.TabIndex = 97;
-            this.txtIDEmpresa.TabStop = false;
-            this.txtIDEmpresa.Tag = "fkIdEmpresa";
-            this.txtIDEmpresa.Visible = false;
-            this.txtIDEmpresa.TextChanged += new System.EventHandler(this.txtIDEmpresa_TextChanged);
+            this.txtIDTipoCuenta.Location = new System.Drawing.Point(328, 159);
+            this.txtIDTipoCuenta.Name = "txtIDTipoCuenta";
+            this.txtIDTipoCuenta.Size = new System.Drawing.Size(34, 20);
+            this.txtIDTipoCuenta.TabIndex = 97;
+            this.txtIDTipoCuenta.TabStop = false;
+            this.txtIDTipoCuenta.Tag = "fkIdTipo";
+            this.txtIDTipoCuenta.Visible = false;
+            this.txtIDTipoCuenta.TextChanged += new System.EventHandler(this.txtIDEmpresa_TextChanged);
             // 
-            // txtFinContrato
+            // cbxIDTipo
             // 
-            this.txtFinContrato.Location = new System.Drawing.Point(398, 219);
-            this.txtFinContrato.Name = "txtFinContrato";
-            this.txtFinContrato.Size = new System.Drawing.Size(62, 20);
-            this.txtFinContrato.TabIndex = 96;
-            this.txtFinContrato.TabStop = false;
-            this.txtFinContrato.Tag = "finDeContrato";
-            this.txtFinContrato.Visible = false;
-            this.txtFinContrato.TextChanged += new System.EventHandler(this.txtFinContrato_TextChanged);
-            // 
-            // dtpFinContrato
-            // 
-            this.dtpFinContrato.Location = new System.Drawing.Point(140, 220);
-            this.dtpFinContrato.Name = "dtpFinContrato";
-            this.dtpFinContrato.Size = new System.Drawing.Size(240, 20);
-            this.dtpFinContrato.TabIndex = 4;
-            this.dtpFinContrato.ValueChanged += new System.EventHandler(this.dtpFinContrato_ValueChanged);
-            // 
-            // cbxIDEmpresa
-            // 
-            this.cbxIDEmpresa.FormattingEnabled = true;
-            this.cbxIDEmpresa.Location = new System.Drawing.Point(139, 253);
-            this.cbxIDEmpresa.Name = "cbxIDEmpresa";
-            this.cbxIDEmpresa.Size = new System.Drawing.Size(241, 21);
-            this.cbxIDEmpresa.TabIndex = 5;
-            this.cbxIDEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbxIDEmpresa_SelectedIndexChanged);
+            this.cbxIDTipo.FormattingEnabled = true;
+            this.cbxIDTipo.ItemHeight = 13;
+            this.cbxIDTipo.Location = new System.Drawing.Point(115, 159);
+            this.cbxIDTipo.Name = "cbxIDTipo";
+            this.cbxIDTipo.Size = new System.Drawing.Size(209, 21);
+            this.cbxIDTipo.TabIndex = 5;
+            this.cbxIDTipo.SelectedIndexChanged += new System.EventHandler(this.cbxIDEmpresa_SelectedIndexChanged);
             // 
             // lblIDEmpresa
             // 
             this.lblIDEmpresa.AutoSize = true;
-            this.lblIDEmpresa.Location = new System.Drawing.Point(52, 256);
+            this.lblIDEmpresa.Location = new System.Drawing.Point(28, 162);
             this.lblIDEmpresa.Name = "lblIDEmpresa";
-            this.lblIDEmpresa.Size = new System.Drawing.Size(65, 13);
+            this.lblIDEmpresa.Size = new System.Drawing.Size(82, 13);
             this.lblIDEmpresa.TabIndex = 94;
-            this.lblIDEmpresa.Text = "ID Empresa:";
+            this.lblIDEmpresa.Text = "ID Tipo Cuenta:";
             // 
-            // lblFinContrato
+            // label5
             // 
-            this.lblFinContrato.AutoSize = true;
-            this.lblFinContrato.Location = new System.Drawing.Point(52, 226);
-            this.lblFinContrato.Name = "lblFinContrato";
-            this.lblFinContrato.Size = new System.Drawing.Size(82, 13);
-            this.lblFinContrato.TabIndex = 95;
-            this.lblFinContrato.Text = "Fin de Contrato:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Saldo Acumulado:";
             // 
-            // frmVentana1
+            // txtSaldoAcumulado
+            // 
+            this.txtSaldoAcumulado.Location = new System.Drawing.Point(115, 238);
+            this.txtSaldoAcumulado.Name = "txtSaldoAcumulado";
+            this.txtSaldoAcumulado.Size = new System.Drawing.Size(209, 20);
+            this.txtSaldoAcumulado.TabIndex = 6;
+            this.txtSaldoAcumulado.Tag = "saldoAcumulado ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(42, 267);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Descripción:";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(115, 264);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(209, 42);
+            this.txtDescripcion.TabIndex = 7;
+            this.txtDescripcion.Tag = "descripcion";
+            // 
+            // frmCuentaContable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 425);
-            this.Controls.Add(this.txtIDEmpresa);
-            this.Controls.Add(this.txtFinContrato);
-            this.Controls.Add(this.dtpFinContrato);
-            this.Controls.Add(this.cbxIDEmpresa);
-            this.Controls.Add(this.lblIDEmpresa);
-            this.Controls.Add(this.lblFinContrato);
+            this.ClientSize = new System.Drawing.Size(1186, 358);
             this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtSaldoAcumulado);
+            this.Controls.Add(this.txtAbono);
+            this.Controls.Add(this.txtCargo);
+            this.Controls.Add(this.txtIDTipoCuenta);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtIDCuenta);
+            this.Controls.Add(this.lblIDEmpresa);
+            this.Controls.Add(this.cbxIDTipo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.dgvVistaPrevia);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.navegador1);
-            this.Name = "frmVentana1";
-            this.Text = "frmVentana1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "frmCuentaContable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "4103 Cuentas Contables";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -289,21 +308,22 @@ namespace CapaVista
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtIDCuenta;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtAbono;
         private System.Windows.Forms.DataGridView dgvVistaPrevia;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rbnEstatusamodulo;
         private System.Windows.Forms.RadioButton rbnEstatusimodulo;
         private System.Windows.Forms.Label lblEstatus;
-        private System.Windows.Forms.TextBox txtIDEmpresa;
-        private System.Windows.Forms.TextBox txtFinContrato;
-        private System.Windows.Forms.DateTimePicker dtpFinContrato;
-        private System.Windows.Forms.ComboBox cbxIDEmpresa;
+        private System.Windows.Forms.TextBox txtIDTipoCuenta;
+        private System.Windows.Forms.ComboBox cbxIDTipo;
         private System.Windows.Forms.Label lblIDEmpresa;
-        private System.Windows.Forms.Label lblFinContrato;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSaldoAcumulado;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtDescripcion;
     }
 }

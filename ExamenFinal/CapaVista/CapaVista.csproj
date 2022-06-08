@@ -38,6 +38,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Ingenieria de Software\RRHH 11\Componentes\Seguridad\SeguridadHSC\CapaControlador\bin\Debug\CapaControladorSeguridadHSC.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVistaRRHH">
+      <HintPath>..\..\..\RRHH 11\Modulos\ModuloRRHH\CapaVistaRRHH\bin\Debug\CapaVistaRRHH.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVistaSeguridadHSC">
       <HintPath>F:\Ingenieria de Software\RRHH 11\Componentes\Seguridad\SeguridadHSC\CapaVista\bin\Debug\CapaVistaSeguridadHSC.dll</HintPath>
     </Reference>
@@ -56,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCuentasBancarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentasBancarias.Designer.cs">
+      <DependentUpon>frmCuentasBancarias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmpresas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,27 +77,68 @@
     <Compile Include="frmMDI.Designer.cs">
       <DependentUpon>frmMDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVentana1.cs">
+    <Compile Include="frmCuentaContable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVentana1.Designer.cs">
-      <DependentUpon>frmVentana1.cs</DependentUpon>
+    <Compile Include="frmCuentaContable.Designer.cs">
+      <DependentUpon>frmCuentaContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoCuenta.Designer.cs">
+      <DependentUpon>frmTipoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoCuentaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoCuentaBancaria.Designer.cs">
+      <DependentUpon>frmTipoCuentaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoMovimientosBancarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoMovimientosBancarios.Designer.cs">
+      <DependentUpon>frmTipoMovimientosBancarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Recursos\" />
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="frmCuentasBancarias.resx">
+      <DependentUpon>frmCuentasBancarias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmpresas.resx">
       <DependentUpon>frmEmpresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMDI.resx">
       <DependentUpon>frmMDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVentana1.resx">
-      <DependentUpon>frmVentana1.cs</DependentUpon>
+    <EmbeddedResource Include="frmCuentaContable.resx">
+      <DependentUpon>frmCuentaContable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoCuenta.resx">
+      <DependentUpon>frmTipoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoCuentaBancaria.resx">
+      <DependentUpon>frmTipoCuentaBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoMovimientosBancarios.resx">
+      <DependentUpon>frmTipoMovimientosBancarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Recursos\2ZNHHUUHCVC4RIWRIAFFAYNSBU.jpg" />
+    <Content Include="Recursos\icons8_Cryptocurrency_Bank.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
