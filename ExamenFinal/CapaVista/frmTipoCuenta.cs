@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class frmVentana1 : Form
+    public partial class frmTipoCuenta : Form
     {
-        public frmVentana1()
+        public frmTipoCuenta()
         {
             InitializeComponent();
-
             TextBox[] alias = navegador1.ClasificaTextboxsegunParent(this);
-            navegador1.ObtenerCamposdeTabla(alias, "jornada", "hotelSanCarlos");
+            navegador1.ObtenerCamposdeTabla(alias, "tipocuenta", "hotelSanCarlos");
             navegador1.MetodoSalirVista(this);
-            navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estado");
+            //navegador1.LlenarCombobox(cbxIDPuesto, "puesto", "pkIdPuesto", "nombre", "estado");
             //navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
 
             //inicio de elementos para dar de baja
@@ -48,32 +47,10 @@ namespace CapaVista
             //navegador1.pruebaMensaje(cadena);
         }
 
-        private void dtpFinContrato_ValueChanged(object sender, EventArgs e)
-        {
-            navegador1.CambiarFormatoFecha(dtpFinContrato, txtFinContrato);
-        }
-
-        private void txtFinContrato_TextChanged(object sender, EventArgs e)
-        {
-            navegador1.SeleccionarFechaDTP(dtpFinContrato, txtFinContrato);
-            navegador1.CambiarFormatoFecha(dtpFinContrato, txtFinContrato);
-        }
-
-        private void cbxIDEmpresa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            navegador1.EnviarDatoComboaTextbox(cbxIDEmpresa, txtIDEmpresa);
-        }
-
-        private void txtIDEmpresa_TextChanged(object sender, EventArgs e)
-        {
-            navegador1.SeleccionarElementosenCombo(cbxIDEmpresa, txtIDEmpresa);
-        }
-
         private void txtEstado_TextChanged(object sender, EventArgs e)
         {
             navegador1.ActivaRadiobtn(rbnEstatusamodulo, rbnEstatusimodulo, txtEstado);
         }
-
         private void rbnEstatusamodulo_CheckedChanged(object sender, EventArgs e)
         {
             navegador1.CambioEstadoTextbox(txtEstado, rbnEstatusamodulo, "1");
@@ -84,5 +61,9 @@ namespace CapaVista
             navegador1.CambioEstadoTextbox(txtEstado, rbnEstatusimodulo, "0");
         }
 
+        private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
+        {
+            navegador1.SelecciondeFilaDGV(dgvVistaPrevia);
+        }
     }
 }
